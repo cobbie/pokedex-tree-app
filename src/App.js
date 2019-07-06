@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      treeOperation: 0
+      treeOperation: true
      }
   }
 
@@ -17,7 +17,8 @@ class App extends React.Component {
     let tempArr2 = ["Gen 1", "Not Legendary", "Ice", "Electric", "...", "Flying", "Articuno"]
 
     switch(this.state.treeOperation){
-      case(0):
+      // true for generation, false for traversal
+      case(true):
         return(
         <InfoSearch
         arrayType = "Queue"
@@ -26,7 +27,7 @@ class App extends React.Component {
         results={`${JSON.stringify(["Gen 1", "Legendary"])}`}
         />
         )
-      case(1):
+      case(false):
           return(
           <InfoSearch
             arrayType = "Full Path"
@@ -43,10 +44,17 @@ class App extends React.Component {
           )
     }
   }
+  treeClick = () => {
+    this.setState({
+      treeOperation: !this.state.treeOperation
+    })
+  }
   render = () => { 
     return ( 
       <div>
-        <Header />
+        <Header 
+          onClick={this.treeClick}
+        />
         {this.renderInfoSearch()}
         <div id="button-flexbox">
         <Button treeType="BFS" />

@@ -15,7 +15,10 @@ const Header = props => {
                 </div>
                 <div id="pokedex">Pokedex</div>
                 </div>
-                <div id="tree-item-flex-container"><div className="tree-navbar">Tree Generation</div><div className="tree-navbar">Tree Traversal</div></div>
+                <div id="tree-item-flex-container">
+                    <div className="tree-navbar" onClick={props.onClick}>Tree Generation</div>
+                    <div className="tree-navbar" onClick={props.onClick}>Tree Traversal</div>
+                </div>
             </div>
         </div>
     )
