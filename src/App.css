@@ -9,3 +9,9 @@ div{
   margin-left: 312px;
   width: 800px;
 }
+
+#search-flexbox{
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
