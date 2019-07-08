@@ -55,14 +55,15 @@ class App extends React.Component {
     this.setState({searchInput: event.target.value});
   }
 
-  treeClick = () => {
-    this.setState({treeOperation: !this.state.treeOperation});
+  treeClick = newState => {
+    this.setState({treeOperation: newState});
   }
   render = () => { 
     return ( 
       <div>
         <Header 
-          onClick={this.treeClick}
+          onClick1={() => this.treeClick(true)}
+          onClick2={() => this.treeClick(false)}
         />
         {this.renderInfoSearch()}
         <div id="button-flexbox">

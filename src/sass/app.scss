@@ -8,7 +8,6 @@ div {
 }
 
 input{
-
     background: transparent;
     border: solid 2px black;
     height: 25px;
@@ -26,10 +25,18 @@ input{
 
 #search-flexbox {
   @extend %flexbox;
-  width: 300px;
+  width: 500px;
+  margin-left: 20px;
 }
 
 
+.text-button{
+    @extend %flexbox;
+    align-items: center;
+    justify-content: center;
+    width: 150%;
+    height: 120%;
+}
 .text-button:hover{
     cursor: pointer;
     border: 3px solid #000000;

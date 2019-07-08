@@ -16,8 +16,8 @@ const Header = props => {
                 <div id="pokedex">Pokedex</div>
                 </div>
                 <div id="tree-item-flex-container">
-                    <div className="tree-navbar" onClick={props.onClick}>Tree Generation</div>
-                    <div className="tree-navbar" onClick={props.onClick}>Tree Traversal</div>
+                    <div className="tree-navbar" onClick={props.onClick1}>Tree Generation</div>
+                    <div className="tree-navbar" onClick={props.onClick2}>Tree Traversal</div>
                 </div>
             </div>
         </div>

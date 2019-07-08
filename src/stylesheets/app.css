@@ -1,4 +1,4 @@
-#button-flexbox, #search-flexbox {
+#button-flexbox, #search-flexbox, .text-button {
   display: flex;
   justify-content: space-between; }
 
@@ -19,7 +19,14 @@ input {
   width: 800px; }
 
 #search-flexbox {
-  width: 300px; }
+  width: 500px;
+  margin-left: 20px; }
+
+.text-button {
+  align-items: center;
+  justify-content: center;
+  width: 150%;
+  height: 120%; }
 
 .text-button:hover {
   cursor: pointer;
