@@ -8,7 +8,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      treeOperation: true
+      treeOperation: true,
+      searchInput: ''
      }
   }
 
@@ -35,7 +36,12 @@ class App extends React.Component {
             resultsType = "Search"
             results={
                 <div id="search-flexbox">
-                  <div>Articuno</div>
+                  <div>
+                  <input type="text" 
+                         value={this.state.searchInput} 
+                         onChange={this.handleInput} 
+                          />
+                  </div>
                   <div>OK</div>
                   <div>CLEAR</div>
                 </div>
@@ -44,10 +50,13 @@ class App extends React.Component {
           )
     }
   }
+
+  handleInput = event => {
+    this.setState({searchInput: event.target.value});
+  }
+
   treeClick = () => {
-    this.setState({
-      treeOperation: !this.state.treeOperation
-    })
+    this.setState({treeOperation: !this.state.treeOperation});
   }
   render = () => { 
     return ( 
