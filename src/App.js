@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/Header/Header'
 import InfoSearch from './components/InfoSearch/InfoSearch'
 import Button from './components/Button/Button'
-import './App.css';
+import './stylesheets/app.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -36,14 +36,14 @@ class App extends React.Component {
             resultsType = "Search"
             results={
                 <div id="search-flexbox">
-                  <div>
+                  <div id="input-container">
                   <input type="text" 
                          value={this.state.searchInput} 
                          onChange={this.handleInput} 
                           />
                   </div>
-                  <div>OK</div>
-                  <div>CLEAR</div>
+                  <div className="text-button">OK</div>
+                  <div className="text-button">CLEAR</div>
                 </div>
             }
             />
